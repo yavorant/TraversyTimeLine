@@ -104,3 +104,37 @@ h1 {
   border-width: 8px 0px 8px 16px;
   border-color: transparent transparent transparent var(--secondary-color);
 }
+
+@media (max-width: 900px) {
+  #timeline ul li div {
+    width: 250px;
+  }
+
+  #timeline ul li:nth-child(odd) div {
+    left: -285px;
+  }
+
+  #timeline ul li:nth-child(odd) div::before {
+    left: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  #timeline ul li {
+    margin-left: 20px;
+  }
+
+  #timeline ul li div {
+    width: calc(100vw - 100px);
+  }
+
+  #timeline ul li:nth-child(odd) div {
+    left: 40px;
+  }
+
+  #timeline ul li:nth-child(odd) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent var(--secondary-color) transparent transparent;
+  }
+}
